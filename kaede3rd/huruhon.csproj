@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{200233B1-FE5F-41BA-B923-3D7E1EF96AEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>huruhon</RootNamespace>
+    <AssemblyName>huruhon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>\\192.168.1.10\huruhon\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://test.com:8090/</InstallUrl>
+    <PublisherName>関川 柊</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>3.4.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5F5790AEFE5E77A7DB802F0FF5035B00A3F8B919</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>kaede3rd_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetBarcode">
+      <HintPath>.\DotNetBarcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="AutoPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoPrint.Designer.cs">
+      <DependentUpon>AutoPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoxEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoxEdit.Designer.cs">
+      <DependentUpon>BoxEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoxItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoxItem.Designer.cs">
+      <DependentUpon>BoxItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoxItemShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoxItemShow.Designer.cs">
+      <DependentUpon>BoxItemShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DBClass.cs">
+      <DependentUpon>DBClass.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DBClass.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBClass.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DbConfig.cs" />
+    <Compile Include="BagEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BagEdit.Designer.cs">
+      <DependentUpon>BagEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GassanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GassanForm.designer.cs">
+      <DependentUpon>GassanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenreEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreEdit.Designer.cs">
+      <DependentUpon>GenreEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="HenkinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HenkinForm.designer.cs">
+      <DependentUpon>HenkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemsShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsShow.Designer.cs">
+      <DependentUpon>ItemsShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KansaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KansaForm.designer.cs">
+      <DependentUpon>KansaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperatorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperatorList.Designer.cs">
+      <DependentUpon>OperatorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintUtils.cs" />
+    <Compile Include="ReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptForm.Designer.cs">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptPrint.Designer.cs">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RePrint.Designer.cs">
+      <DependentUpon>RePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectOperator.designer.cs">
+      <DependentUpon>SelectOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellForm.Designer.cs">
+      <DependentUpon>SellForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignedRequestHelper.cs" />
+    <Compile Include="TitleSplitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleSplitForm.designer.cs">
+      <DependentUpon>TitleSplitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Version.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Version.Designer.cs">
+      <DependentUpon>Version.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebRegister.Designer.cs">
+      <DependentUpon>WebRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebRegisterItem.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebRegisterItem.dbml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AutoPrint.resx">
+      <DependentUpon>AutoPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoxEdit.resx">
+      <DependentUpon>BoxEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoxItem.resx">
+      <DependentUpon>BoxItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BagEdit.resx">
+      <DependentUpon>BagEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GassanForm.resx">
+      <DependentUpon>GassanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenreEdit.resx">
+      <DependentUpon>GenreEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HenkinForm.resx">
+      <DependentUpon>HenkinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsShow.resx">
+      <DependentUpon>ItemsShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KansaForm.resx">
+      <DependentUpon>KansaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperatorList.resx">
+      <DependentUpon>OperatorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptPrint.resx">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RePrint.resx">
+      <DependentUpon>RePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectOperator.resx">
+      <DependentUpon>SelectOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellForm.resx">
+      <DependentUpon>SellForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleSplitForm.resx">
+      <DependentUpon>TitleSplitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Version.resx">
+      <DependentUpon>Version.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebRegister.resx">
+      <DependentUpon>WebRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="WebRegisterItem.dbml.layout">
+      <DependentUpon>WebRegisterItem.dbml</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="DBClass.dbml.layout">
+      <DependentUpon>DBClass.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DBClass.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBClass.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kaede3rd_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WebRegisterItem.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>WebRegisterItem.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DotNetBarcode.dll" />
+    <Content Include="kaede3rd.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="kaede3rd_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>kaede3rd.mdf</DependentUpon>
+    </Content>
+    <Content Include="Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tables.mssql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DotNetBarcode">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Settings.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>\\192.168.1.10\huruhon\|\\192.168.1.10\kaede3rd\|\\whs\kaede3rd\|http://lampos.homeserver.com:8090/|\\WHS\kaede3rd\</PublishUrlHistory>
+    <InstallUrlHistory>http://test.com:8090/|http://lampos.homeserver.com:8090/|\\whs\kaede3rd\|http://lampos.homeserver.com/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>ja-JP</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

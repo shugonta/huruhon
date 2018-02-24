@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AppConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ConnectList>
+    <Connection>
+      <cfgname>古本部門</cfgname>
+      <host>xioztevw38.database.windows.net</host>
+      <port />
+      <user>huruhon</user>
+      <pass>1#60thennichi</pass>
+      <dbname>huruhon</dbname>
+    </Connection>
+    <Connection>
+      <cfgname>ガラクタ部門</cfgname>
+      <host>xioztevw38.database.windows.net</host>
+      <port />
+      <user>garakuta</user>
+      <pass>1#60thennichi</pass>
+      <dbname>garakuta</dbname>
+    </Connection>
+  </ConnectList>
+  <ShowForm_RecentItem>false</ShowForm_RecentItem>
+  <ShowPrintDialog_AtTagPrint>true</ShowPrintDialog_AtTagPrint>
+</AppConfig>

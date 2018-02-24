@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="WebRegisterItem">
+  <DataContextMoniker Name="/WebRegisterItemDataContext" />
+  <nestedChildShapes>
+    <classShape Id="516008f9-aef9-498f-94cc-192efd49e270" absoluteBounds="2.625, 3.5, 2, 2.5495833333333335">
+      <DataClassMoniker Name="/WebRegisterItemDataContext/writem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69996f88-f12c-4f5e-9288-f7d046cd9ccb" absoluteBounds="2.64, 3.96, 1.9700000000000002, 1.9895833333333335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a154ef5-5dd7-4ae5-ae39-108ed746f4e5" absoluteBounds="6.625, 3.5, 2, 2.763125">
+      <DataClassMoniker Name="/WebRegisterItemDataContext/wrreceipt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c53e45f-6fae-4d20-82dc-4fad3123891a" absoluteBounds="6.6400000000000006, 3.96, 1.9700000000000002, 2.203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.625 : 4.77479166666667); (4.625 : 4.77479166666667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WebRegisterItemDataContext/wrreceipt/receipt_writem" />
+      <nodes>
+        <classShapeMoniker Id="2a154ef5-5dd7-4ae5-ae39-108ed746f4e5" />
+        <classShapeMoniker Id="516008f9-aef9-498f-94cc-192efd49e270" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

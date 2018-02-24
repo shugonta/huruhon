@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="huruhon" Class="DBClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=xioztevw38.database.windows.net;Initial Catalog=huruhon;Persist Security Info=True;User ID=shu" SettingsObjectName="kaede3rd.Properties.Settings" SettingsPropertyName="huruhonConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.operator" Member="operator">
+    <Type Name="operator">
+      <Column Name="operator_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="operator_name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="operator_comment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="operator_receipt" Member="receipt" ThisKey="operator_id" OtherKey="receipt_operator" Type="receipt" />
+      <Association Name="operator_item" Member="item" ThisKey="operator_id" OtherKey="item_sell_operator" Type="item" />
+    </Type>
+  </Table>
+  <Table Name="dbo.receipt" Member="receipt">
+    <Type Name="receipt">
+      <Column Name="receipt_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="receipt_pass" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="receipt_seller" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="receipt_seller_exname" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="receipt_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="receipt_operator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="receipt_payback" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="receipt_comment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="receipt_item" Member="item" ThisKey="receipt_id" OtherKey="item_receipt_id" Type="item" />
+      <Association Name="operator_receipt" Member="operator" ThisKey="receipt_operator" OtherKey="operator_id" Type="operator" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.config" Member="config">
+    <Type Name="config">
+      <Column Name="config_name" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="config_value" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.genre" Member="genre">
+    <Type Name="genre">
+      <Column Name="genre_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="genre_name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.item" Member="item">
+    <Type Name="item">
+      <Column Name="item_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="item_receipt_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item_name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="item_tagprice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="item_tataki" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="item_return" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="item_genre" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_sellway" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="item_receipt_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="item_receipt_operator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_sellprice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_selltime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="item_sell_operator" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_kansa_end" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="item_kansa_flag1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_adjust" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_isbn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="item_volumes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_comment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="item_sellcomment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="item_userspace" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="item_box_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="item_tag_printed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="item_supplement" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="item_sellprice_bag" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="receipt_item" Member="receipt" ThisKey="item_receipt_id" OtherKey="receipt_id" Type="receipt" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="operator_item" Member="operator" ThisKey="item_sell_operator" OtherKey="operator_id" Type="operator" IsForeignKey="true" DeleteRule="SET NULL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.box" Member="box">
+    <Type Name="box">
+      <Column Name="box_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="box_genre" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="box_comment" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="box_isbag" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

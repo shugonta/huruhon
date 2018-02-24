@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xrml="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <assemblyIdentity name="kaede3rd.application" version="1.0.1.3" publicKeyToken="9835a111e8391460" language="neutral" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:publisher="関川 柊" asmv2:product="kaede3rd" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <deployment install="true" mapFileExtensions="true">
+    <subscription>
+      <update>
+        <beforeApplicationStartup />
+      </update>
+    </subscription>
+    <deploymentProvider codebase="http://lampos.homeserver.com:8090/kaede3rd.application" />
+  </deployment>
+  <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
+    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+  </compatibleFrameworks>
+  <dependency>
+    <dependentAssembly dependencyType="install" codebase="Application Files\kaede3rd_1_0_1_3\kaede3rd.exe.manifest" size="9063">
+      <assemblyIdentity name="kaede3rd.exe" version="1.0.1.3" publicKeyToken="9835a111e8391460" language="neutral" processorArchitecture="x86" type="win32" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SP5F7XhOzfzIMW6E30PRgNLpJ7g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=LIVING\SHU" issuerKeyHash="db560be90ff85d3ac25727937ba836a39971c4b2" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>UcQyX4Ts7jzgiGc3B5Y9jf4TQ/U=</DigestValue></Reference></SignedInfo><SignatureValue>EgIoRF1MwvOcIaZROR5BtYLzJmhwm5xA4rGgvoO92aKnEhO/7gi2tpiSAwQSeH0fqKdfgyseFjXFwclI02IvUkmeS012htrig1TgmGLKxBnC9vAnjciDnRx06pUxodvynvb0/8HHhcR/1ak2Oy0bRi5VypEoha8mdTSZs+jbtoQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wrjSMEc3pB2k+yYwghV7Pn9xxdOFFxUrLMuHGVWvFbdksuVCWb2ifSc2vOrScDRyFcORrtZnNxB6KJGcXJHodof/lNFhnAiqysD6CH5JI3aeCTGXzWX/0Zs7eXQdrypwlmuFnElBzlf6cJTe8lyPVw4NTavL2E7KkntiFUbjX/M=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f54313fe8d3d9607376788e03ceeec845f32c451" Description="" Url=""><as:assemblyIdentity name="kaede3rd.application" version="1.0.1.3" publicKeyToken="9835a111e8391460" language="neutral" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LIVING\SHU</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>5s6zruw3lMl4XwZvihDAUZk+cCM=</DigestValue></Reference></SignedInfo><SignatureValue>j5YIPSrbSLfkfAAtJk7AOr6g6cwkSvl69ZyF2Dbc5RXwGZN4RbqKT7dByNAU/lyiP2JcQdVSVVCJLGjNjPUfDWBWmzmqT6L6O3/YSZbhxaNxFUvtvhWSN5GXF8nv1OOnQXx28tdYgqJeso9vrXz30p6Vm6+JGSHBXZi5mYqJNyc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wrjSMEc3pB2k+yYwghV7Pn9xxdOFFxUrLMuHGVWvFbdksuVCWb2ifSc2vOrScDRyFcORrtZnNxB6KJGcXJHodof/lNFhnAiqysD6CH5JI3aeCTGXzWX/0Zs7eXQdrypwlmuFnElBzlf6cJTe8lyPVw4NTavL2E7KkntiFUbjX/M=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBwTCCASqgAwIBAgIQJz5th9tubr1Arvw0xldaMjANBgkqhkiG9w0BAQUFADAfMR0wGwYDVQQDHhQATABJAFYASQBOAEcAXABTAEgAVTAeFw0xMTA5MTIxNTM5MzZaFw0xMjA5MTEyMTM5MzZaMB8xHTAbBgNVBAMeFABMAEkAVgBJAE4ARwBcAFMASABVMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCuNIwRzekHaT7JjCCFXs+f3HF04UXFSssy4cZVa8Vt2Sy5UJZvaJ9Jza86tJwNHIVw5Gu1mc3EHookZxckeh2h/+U0WGcCKrKwPoIfkkjdp4JMZfNZf/Rmzt5dB2vKnCWa4WcSUHOV/pwlN7yXI9XDg1Nq8vYTsqSe2IVRuNf8wIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAJu+HjuIFFUEbUS2BZyWrXi2M8OpuybybFcTbJBaJ8pTzT6OVD4cyxf587HHZ1qxd/wfgKKMF/M54P+haVD7y2Zv3KscGl4akmao4pkKsHIf2AMD1cOJd2bcGReaIMvCx5lGuRi7s5p2n6l1nxx6L0BQOjx09fX0qvhITDG8f2tI</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

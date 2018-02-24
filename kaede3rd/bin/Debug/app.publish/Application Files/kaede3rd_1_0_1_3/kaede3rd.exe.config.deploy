@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<configuration>
+    <configSections>
+    </configSections>
+    <connectionStrings>
+        <add name="kaede3rd.Properties.Settings.kaede3rdConnectionString"
+            connectionString="Data Source=LIVING;Initial Catalog=kaede3rd;Integrated Security=True"
+            providerName="System.Data.SqlClient" />
+        <add name="kaede3rd.Properties.Settings.kaede3rdConnectionString1"
+            connectionString="Data Source=lampos.homeserver.com;Initial Catalog=kaede3rd;User ID=sa;Password=shugontausausa"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>
